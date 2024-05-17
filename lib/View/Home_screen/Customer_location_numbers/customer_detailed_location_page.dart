@@ -24,7 +24,7 @@ class LocationPage extends StatefulWidget {
   final String Latitude;
   final String Longitude;
 
-  LocationPage({
+  const LocationPage({
     Key? key,
     required this.driver_name,
     required this.location_adrress,
@@ -48,9 +48,9 @@ class _LocationPageState extends State<LocationPage> {
   final List<Marker> _marker = [];
 
   final List<Marker> _list = [
-    Marker(
-      markerId: const MarkerId("1"),
-      position: const LatLng(24.8846, 70.1754),
+    const Marker(
+      markerId: MarkerId("1"),
+      position: LatLng(24.8846, 70.1754),
       infoWindow: InfoWindow(title: "Current Location"),
     )
   ];
@@ -85,7 +85,7 @@ class _LocationPageState extends State<LocationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Driver Location"),
+        title: const Text("Driver Location"),
       ),
       drawer: MyDrawer(
         userModel: widget.userModel,
@@ -115,7 +115,7 @@ class _LocationPageState extends State<LocationPage> {
               _marker.add(Marker(
                 markerId: const MarkerId("2"),
                 position: LatLng(value.latitude, value.longitude),
-                infoWindow: InfoWindow(title: "My Location"),
+                infoWindow: const InfoWindow(title: "My Location"),
               ));
 
               List<Placemark> placemarks = await placemarkFromCoordinates(

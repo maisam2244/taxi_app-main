@@ -112,7 +112,7 @@ class CustomerLocationNumbers extends StatelessWidget {
                                       Align(
                                         alignment: Alignment.centerLeft,
                                         child: Text(
-                                          "Passengers: " + numOfPassengers,
+                                          "Passengers: $numOfPassengers",
                                           style: TextStyle(color: AppColors.whiteColor, fontSize: 18),
                                         ),
                                       ),
